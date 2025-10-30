@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendário Mensal</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1 id="tituloMes"></h1>
+  </header>
+
+  <div class="container">
+    <div class="month-grid" id="monthGrid"></div>
+    <div class="time-list" id="timeList"></div>
+
+    <div class="confirm-card" id="confirmCard">
+      <h3>Confirmar Agendamento</h3>
+      <p id="confirmHorario"></p>
+      <textarea id="observacao" placeholder="Adicionar observação (opcional)..."></textarea><br>
+      <button id="confirmarBtn">Confirmar</button>
+      <button class="cancelar" id="cancelarBtn">Cancelar</button>
+    </div>
+  </div>
+
+  <footer>
+    <button onclick="voltar()">Voltar</button>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário Anual</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Calendário de Agendamentos - 2025</h1>
+  </header>
+
+  <div class="container">
+    <h2>Selecione o mês</h2>
+    <div class="calendar-grid">
+      <script>
+        const meses = [
+          "Janeiro","Fevereiro","Março","Abril","Maio","Junho",
+          "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"
+        ];
+        const hoje = new Date();
+        const ano = 2025;
+        meses.forEach((mes, i) => {
+          document.write(`
+            <div class="month-card ${i < hoje.getMonth() ? 'opaco' : ''}" 
+                 onclick="${i < hoje.getMonth() ? '' : `selecionarMes(${i})`}">
+              ${mes}
+            </div>
+          `);
+        });
+      </script>
+    </div>
+  </div>
+
+  <footer>
+    <button onclick="voltar()">Sair</button>
+  </footer>
+
+  <script>
+    function selecionarMes(mes) {
+      localStorage.setItem("mesSelecionado", mes);
+      window.location.href = "calendario-mes.html";
+    }
+    function voltar() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

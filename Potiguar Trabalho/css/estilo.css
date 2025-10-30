@@ -1,0 +1,134 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #c00000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  background: #c00000;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { background: #a00000; }
+button.cancelar { background: gray; }
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.month-card {
+  border: 2px solid #c00000;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+.month-card:hover {
+  background: #c00000;
+  color: white;
+}
+.opaco {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.day-cell {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.day-cell:hover { background: #fbecec; }
+.day-past { opacity: 0.5; cursor: not-allowed; background: #f7f7f7; }
+
+.day-green { background: #eaf8ea; border-color: #47c447; }
+.day-yellow { background: #fff8e1; border-color: #ffc107; }
+.day-red { background: #fdeaea; border-color: #c00000; }
+
+.time-slot {
+  display: inline-block;
+  border: 1px solid #c00000;
+  color: #c00000;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.time-slot:hover { background: #c00000; color: white; }
+.occupied { background: #c00000; color: white; opacity: 0.8; }
+
+.confirm-card {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.confirm-card textarea {
+  width: 80%;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  resize: none;
+}
+
+footer {
+  text-align: center;
+  margin: 30px 0;
+  color: #777;
+}
